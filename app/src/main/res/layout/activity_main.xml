@@ -1,17 +1,206 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.lcns.lemotree.lcnsyhlc.MainActivity">
+    android:orientation="vertical"
 
-    <TextView
-        android:layout_width="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:background="#3ba5d9"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_account"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10sp"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_info"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="聊城农商银行农金通"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <ListView
+            android:id="@+id/my_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:groupIndicator="@null"
+            android:fadingEdge="none"
+            android:childDivider="#00000000"
+            android:background="#00000000"
+            android:listSelector="#00000000"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:background="#7f000000"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统公告:  "
+                android:textColor="@android:color/white"
+                android:drawableLeft="@drawable/icon_notification"
+                android:layout_marginLeft="10sp"
+                />
+            <com.lcns.lemotree.lcnsyhlc.widget.AlwaysMarqueeTextView
+                android:id="@+id/txt_tongzhi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:text="最新版本V3.0.2将于明天24:00升级！----------------------------------------******************************"
+                android:textColor="@android:color/white"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_addfragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/my_listview"
+            android:orientation="vertical"
+            android:background="@drawable/bg_menu"
+            >
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="理财产品"
+                    android:gravity="center_horizontal"
+                    android:drawableTop="@drawable/btn_financial"
+                    />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="信贷产品"
+                    android:gravity="center_horizontal"
+                    android:drawableTop="@drawable/btn_credit"
+                    />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="卡类产品"
+                    android:gravity="center_horizontal"
+                    android:drawableTop="@drawable/btn_card"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_bottom"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="#3ba5d9"-->
+            <!--&gt;-->
+            <!--<TextView-->
+                <!--android:id="@+id/txt_chanpin"-->
+                <!--android:layout_width="0dip"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:paddingTop="10sp"-->
+                <!--android:paddingBottom="10sp"-->
+                <!--android:text="产品"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:drawableTop="@drawable/btn_productprint"-->
+                <!--android:layout_marginRight="2sp"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txt_yewu"-->
+                <!--android:layout_width="0dip"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:paddingTop="10sp"-->
+                <!--android:paddingBottom="10sp"-->
+                <!--android:text="业务"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:layout_marginRight="2sp"-->
+                <!--android:drawableTop="@drawable/btn_businessprint"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txt_guanli"-->
+                <!--android:layout_width="0dip"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:paddingTop="10sp"-->
+                <!--android:paddingBottom="10sp"-->
+                <!--android:text="管理"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:layout_marginRight="2sp"-->
+                <!--android:drawableTop="@drawable/btn_managementprint"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txt_shezhi"-->
+                <!--android:layout_width="0dip"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:paddingTop="10sp"-->
+                <!--android:paddingBottom="10sp"-->
+                <!--android:text="设置"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:drawableTop="@drawable/btn_settingprint"-->
+                <!--/>-->
+
+        <!--</LinearLayout>-->
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
