@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_menu"
+    >
+
+    <ImageView
+        android:id="@+id/logoId"
+        android:layout_width="280px"
+        android:layout_height="108px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="130px"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/laymargintop"
+        android:text="聊城农商银行农金通"
+        android:textColor="#ff000000"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/icon"
+        android:drawablePadding="5sp"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="@dimen/btnwidth"
+        android:layout_height="@dimen/btnheight"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70px"
+        android:background="@drawable/input">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="柜员号："
+            android:textColor="#ff000000"
+            android:textSize="@dimen/textsize1" />
+
+        <EditText
+            android:id="@+id/edt_login_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50px"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="#000000"
+            android:background="@android:color/white"
+            android:textCursorDrawable="@null"
+            android:layout_marginRight="10sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="@dimen/btnwidth"
+        android:layout_height="@dimen/btnheight"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="密    码："
+            android:textColor="#ff000000"
+            android:textSize="@dimen/textsize1" />
+
+        <EditText
+            android:id="@+id/edt_login_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50px"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:textColor="#000000"
+            android:background="@android:color/white"
+            android:layout_marginRight="10sp"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginIdfirst"
+        android:layout_width="@dimen/btnwidth"
+        android:layout_height="@dimen/btnheight"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150sp"
+        android:text="登     录"
+        android:background="@drawable/bg_btn07"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/btntextsize" />
+
+</LinearLayout>

@@ -1,5 +1,38 @@
 <resources>
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- values -->
+    <dimen name="marginTopT">80dp</dimen>
+    <dimen name="marginTopM">40dp</dimen>
+    <dimen name="marginTopB">160dp</dimen>
+    <dimen name="btnmargin">20dp</dimen>
+    <dimen name="btnwidth">540px</dimen>
+    <dimen name="btnheight">90px</dimen>
+    <dimen name="btntextsize">25dp</dimen>
+    <dimen name="textsize1">25px</dimen>
+    <dimen name="textsize2">20px</dimen>
+    <dimen name="item_width">360dp</dimen>
+    <dimen name="item_height">60dp</dimen>
+    <dimen name="laymargintop">230px</dimen>
+    <dimen name="laymarginleft">265px</dimen>
+    <dimen name="titlewidth">600px</dimen>
+    <dimen name="titleheight">63px</dimen>
+    <dimen name="titletextsize">27px</dimen>
+    <dimen name="imageheight">190px</dimen>
+    <dimen name="icontextsize">20px</dimen>
+    <dimen name="iconsize">80px</dimen>
+    <dimen name="tabheight">90px</dimen>
+    <dimen name="btn02height">56px</dimen>
+    <dimen name="btn02width">264px</dimen>
+    <dimen name="photosize">97px</dimen>
+    <dimen name="btnlwhcwidth">97px</dimen>
+    <dimen name="btnlwhcheight">40px</dimen>
+    <dimen name="btnwidthaddhead">560px</dimen>
+    <dimen name="someviewheight">300px</dimen>
+    <dimen name="idmargintop">20px</dimen>
+
+
 </resources>
