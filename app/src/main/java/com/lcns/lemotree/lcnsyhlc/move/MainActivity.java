@@ -1,10 +1,12 @@
 package com.lcns.lemotree.lcnsyhlc.move;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
@@ -22,7 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnClickListener {
 
 
     private AlwaysMarqueeTextView mTongZhi;
@@ -36,17 +38,29 @@ public class MainActivity extends Activity {
     private List<HashMap<String, Integer>> imageIdList;
     private LinearLayout viewGroup;
     private ImageView[] imageViews;
+    private TextView mLccpTv;
+    private TextView mXdcpTv;
+    private TextView mKlcpTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initBodyer();
 
     }
 
-    /***
-     * 轮播图相关内容
-     */
+    public void initBodyer(){
+        mLccpTv = (TextView)findViewById(R.id.tv_lccp);
+        mXdcpTv = (TextView)findViewById(R.id.tv_xdcp);
+        mKlcpTv = (TextView)findViewById(R.id.tv_klcp);
+
+        mLccpTv.setOnClickListener(this);
+        mKlcpTv.setOnClickListener(this);
+        mXdcpTv.setOnClickListener(this);
+    }
+
+
     public void imageLunBo(){
         arrayList = new ArrayList<String>();
 
@@ -76,9 +90,7 @@ public class MainActivity extends Activity {
 
         imageViews = new ImageView[imageIdList.size()];
         viewGroup = (LinearLayout)headerView.findViewById(R.id.viewGroup);
-        /***
-         * 负责又下方的点
-         */
+
         for (int i = 0; i < imageIdList.size(); i++) {
             imageViews[i] = new ImageView(this);
             imageViews[i].setLayoutParams(new LayoutParams(16,16));
@@ -168,5 +180,23 @@ public class MainActivity extends Activity {
             return convertView;
         }
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.tv_klcp:
+                Intent in = new Intent();
+				in.setClass(MainActivity.this,
+						CardMainActivity.class);
+				startActivity(in);
+                break;
+            case R.id.tv_lccp:
+                break;
+            case R.id.tv_xdcp:
+                break;
+            default:
+                break;
+        }
     }
 }
