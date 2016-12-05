@@ -1,6 +1,7 @@
 package com.lcns.lemotree.lcnsyhlc.move;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class CardMainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_main);
+        initBodyer();
 
     }
 
@@ -49,6 +51,10 @@ public class CardMainActivity extends Activity implements View.OnClickListener {
             case R.id.tv_kqx:
                 break;
             case R.id.tv_kzz:
+                Intent in = new Intent();
+                in.setClass(CardMainActivity.this,
+                        CardZhuanZhangActivity.class);
+                startActivity(in);
                 break;
             default:
                 break;

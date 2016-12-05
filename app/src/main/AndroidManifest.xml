@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".move.MainActivity" />
-        <activity android:name=".move.CardMainActivity"></activity>
+        <activity android:name=".move.CardMainActivity" />
+        <activity android:name=".move.CardZhuanZhangActivity"></activity>
     </application>
 
 </manifest>
